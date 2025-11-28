@@ -4,8 +4,7 @@ import subprocess
 import json
 
 def handler(ctx, data: io.BytesIO = None):
-    # 環境変数からOACインスタンスのOCIDを取得
-    oac_ocid = os.environ.get("OAC_INSTANCE_OCID")
+    oac_ocid = "ocid1.analyticsinstance.oc1.ap-tokyo-1.aaaaaaaaurpers4kla3u4mo7c3pz35elstyvrdhhev5wwmwmx77rekwr25pq"
     if not oac_ocid:
         return {"status": "FAILED", "message": "OAC_INSTANCE_OCID environment variable is missing."}
 
